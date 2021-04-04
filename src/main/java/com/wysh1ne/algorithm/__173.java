@@ -16,15 +16,24 @@ public class __173 {
         Queue<Integer> queue = new LinkedList<Integer>();
 
         public BSTIterator(TreeNode root) {
-            queue
+            init(root);
+        }
+
+        private void init(TreeNode root) {
+            if (root == null) {
+                return;
+            }
+            init(root.left);
+            queue.offer(root.val);
+            init(root.right);
         }
 
         public int next() {
-
+            return queue.poll();
         }
 
         public boolean hasNext() {
-
+            return !queue.isEmpty();
         }
     }
 }
