@@ -9,7 +9,7 @@ package com.wysh1ne.algorithm;
 public class __91 {
     static class Solution {
         public static int numDecodings(String s) {
-
+            return 0;
         }
 
     }
